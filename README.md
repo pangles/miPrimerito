@@ -1,8 +1,8 @@
-##FORMACION GIT
+## FORMACION GIT
 
-##para editor simple de texto usar nano, para los merge desde bash :wq
+-para editor simple de texto usar nano, para los merge desde bash :wq
 
-##Genericos
+## Genericos
 
 #cd mkdir ls
 #touch filename         	      			crea fichero
@@ -38,7 +38,7 @@
 
 #git revert 														se mueve a un commit anterior
 
-##Acceder a Objects Git
+## Acceder a Objects Git
 
 #git cat-file -p [fd7524bf]			con el hexadecimal SHA1, los 5 o 6 primeros hex
 #git cat-file -z [fd7524bf]			tamaño del fichero objecto
@@ -48,7 +48,7 @@
 
 find .git/objects/ -type f 			busca los tipos ficheros guardados en git
 
-##Crear tree (Para crear objectos en git, luego pasarlos al Staging y por ultimo traerlos a local)
+## Crear tree (Para crear objectos en git, luego pasarlos al Staging y por ultimo traerlos a local)
 	#Tree de ejemplo
 	{
 
@@ -58,12 +58,12 @@ find .git/objects/ -type f 			busca los tipos ficheros guardados en git
 #cat [temp_tree.txt] | git mktree 		Tabulador entre hex y filename
 #git read-tree [42523]					leer el arbol para llevarlo al stagin area
 
-##Staging area leer y traer a local
+## Staging area leer y traer a local
 
 #git ls-files -s
 #git checkout-index -a 				traernos desde el staging area a local
 
-##Branchs
+## Branchs
 ls -la .git/refs/heads 				en heads se guardan las referencias a las ramas.
 cat .git/HEAD 						para ver a donde apunta tu puntero en este momento (En que rama estamos actualmente).
 
@@ -78,21 +78,21 @@ cat .git/HEAD 						para ver a donde apunta tu puntero en este momento (En que r
 
 #git branch -m [nombre actual] [nombre nuevo] 				renombrar el branch
 
-##Merge Fast-Forward
+## Merge Fast-Forward
 
 #git merge [branch name]     							
 	Si hay conflictos te lista un lista de ficheros, que tienes que resolver y mergear                 :wq    por bash
 #git commit -a -m [mensaje del commit/merge] 														una vez resuelto los conflictos
 
-##Clone de un repository
+## Clone de un repository
 
 #git clone [https://github.com/leachim6/hello-world.git] 			bajar un proyecto a local
 
-##Despaquetizar los Objects de un Pack 
+## Despaquetizar los Objects de un Pack 
 cd .git/objects/
 #cat [nombre pack] | git unpack-objects   			previamente hay que mover el pack y su indice a la carpeta objetos.
 
-##Git IGNORE
+## Git IGNORE
 
 .gitignore 										 se añaden todos los ficheros que se quedaran fueran del control de versiones.
 
@@ -133,7 +133,7 @@ cd .git/objects/
 
 
 
-##PRACTICA 1
+## PRACTICA 1
 - Crear un nuevo proyecto Git "Practica"
 - Añadir dos ficheros de texto mediante linea de comandos.
 - Añadirlos como hash-objects
@@ -167,7 +167,7 @@ git checkout-index -a
 git rm --cached fichero1.txt
 git rm --cached fichero2.txt
 
-##PRACTICA 2
+## PRACTICA 2
 Práctica Martes
 - Sobre el proyecto "Practica" crear varios commits con modificaciones de ficheros
 - Sed capaces de movernos entre commits y ver qué ficheros hay en qué commits
