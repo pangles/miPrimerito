@@ -115,6 +115,9 @@ cd .git/objects/
 
 #git push --set-upstream origin fea3 			Cuando creas una nueva rama en local, la subes a origin repository
 
+	Para borrar una rama de remoto:
+	#git push origin :nombre-rama
+
 #git reflog
 
 ## Pull request
